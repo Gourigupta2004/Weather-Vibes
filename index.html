@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Vibes</title>
+    <link rel="stylesheet" href="src/output.css" />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+
+  <!-- Step 1 - Designing background accordingly -->
+  <body class="bg-blue-100 min-h-screen flex items-center justify-center">
+    <!-- Step 2 - Weather Card  -->
+
+    <div class="relative w-full h-screen">
+      <div
+        id="map"
+        class="absolute top-0 left-0 w-full h-screen z-0 rounded-md"
+        style="display: none"
+      ></div>
+
+      <div class="absolute inset-0 flex items-center justify-center z-10">
+        <div
+          id="weatherCard"
+          class="relative bg-white shadow-2xl shadow-black/50 rounded-lg p-6 w-full max-w-md text-center z-10"
+        >
+          <h1 class="heading text-2xl font-bold mb-4 text-gray-800">
+            Weather App
+          </h1>
+
+          <!-- Step 3 - Take City Input -->
+          <input
+            id="cityInput"
+            type="text"
+            placeholder="Enter city name (eg. Delhi, IN)"
+            class="w-full p-2 border border-gray-300 rounded mb-4"
+          />
+
+          <!-- Step 4 - Creating Search Button-->
+
+          <button
+            class="button_1 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded"
+          >
+            Get Weather
+          </button>
+
+          <!-- Step 5 Creating a result box-->
+
+          <div id="weatherInfo" class="mt-6 text-gray-700 text-lg">
+            <!-- <canvas id="weatherAnimation" class="mx-auto my-4" style="width: 150px; height: 150px;"></canvas> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
